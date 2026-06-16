@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Static Site</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        background: #1e293b;
+        padding: 2.5rem 3rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        max-width: 420px;
+      }
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: #38bdf8;
+      }
+      p {
+        color: #94a3b8;
+        margin-bottom: 1.5rem;
+      }
+      button {
+        background: #38bdf8;
+        color: #0f172a;
+        border: none;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      button:hover {
+        background: #0ea5e9;
+      }
+      #count {
+        font-weight: bold;
+        color: #facc15;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>🚀 Hello, Vercel!</h1>
+      <p>This is a static site deployed for learning purposes.</p>
+      <button id="btn">Clicked <span id="count">0</span> times</button>
+    </div>
+
+    <script>
+      let count = 0;
+      const countEl = document.getElementById("count");
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        count++;
+        countEl.textContent = count;
+      });
+    </script>
+  </body>
+</html>
